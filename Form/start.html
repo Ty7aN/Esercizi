@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>HTML Lesson</title>
+    <style>
+      label {
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Registrazione utente</h1>
+
+    <form action="#">
+      <fieldset>
+        <legend>Informazioni personali</legend>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          required
+          minlength="8"
+        />
+
+        <label for="nome">Nome:</label>
+        <input
+          type="text"
+          id="nome"
+          name="nome"
+          required
+          pattern="[A-Za-z]+"
+          minlength="2"
+          maxlenght="10"
+        />
+
+        <label for="cognome">Cognome:</label>
+        <input
+          type="text"
+          id="cognome"
+          name="cognome"
+          required
+          pattern="[A-Za-z]+"
+          minlength="2"
+          maxlenght="10"
+        />
+
+        <label for="data_nascita">Data di nascita:</label>
+        <input type="date" id="data_nascita" name="data_nascita" required />
+
+        <label for="telefono">Numero di telefono:</label>
+        <input type="number" id="telefono" name="telefono" required />
+      </fieldset>
+
+      <fieldset>
+        <legend>Piano di abbonamento</legend>
+
+        <select name="piano">
+          <option value="gratuito">Gratuito</option>
+          <optgroup label="Mensile">
+            <option value="base">Base €10</option>
+            <option value="standard">Standard €20</option>
+            <option value="premium">Premium €30</option>
+          </optgroup>
+        </select>
+
+        <input type="checkbox" name="piano_pro" /> Pro (€ 50/mese)
+      </fieldset>
+
+      <fieldset>
+        <legend>Informazioni di fatturazione</legend>
+
+        <label for="numero_carta">Numero di carta di credito:</label>
+        <input type="number" id="numero_carta" name="numero_carta" required
+        pattern="[0-9]{16}"" />
+
+        <label for="cvc">CVC:</label>
+        <input type="number" id="cvc" name="cvc" required maxlength="3" />
+
+        <label for="data_scadenza">Data di scadenza:</label>
+        <input type="date" id="data_scadenza" name="data_scadenza" required />
+
+        <label for="indirizzo">Indirizzo:</label>
+        <input type="text" id="indirizzo" name="indirizzo" required />
+      </fieldset>
+
+      <input type="submit" value="Registrati" />
+    </form>
+  </body>
+</html>
